@@ -1,58 +1,109 @@
 # Spring Touch
 
-Make websites and apps feel like iOS-style touch animation, using
-original spring and rubber-band code.
+[![Skill](https://img.shields.io/badge/skill-spring--touch-0e62d7)](SKILL.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Spring Touch is a skill, not an app. Load `SKILL.md` first when you
-build a website, an app, or anything that needs animated touch:
-dragging, flicking, sheets, lists, cards, toggles, or overscroll.
+**iOS-style touch animation, as an original, reusable skill.**
 
-## What it covers
+Cheap motion eases from A to B on a fixed curve over a fixed time.
+iOS-style motion has mass: it accelerates, overshoots a little, and
+settles. A user can grab it mid-flight, reverse it, and flick it, and
+it never jumps.
 
-- Spring physics instead of fixed easing curves, for gesture-driven motion
-- Interruptibility: start from the live on-screen value, carry velocity
-  through a retarget, never jump on grab-and-reverse
-- Velocity handoff and momentum projection on flick release
-- Rubber-band overscroll with progressive resistance and a ceiling
-- SwiftUI and web tuning presets, Reduce Motion, and a verification checklist
+Spring Touch turns that feel into code you can use on the web, in
+SwiftUI, and in any app with animated touch. No CSS transition or
+fixed easing curve is substituted for the spring.
 
-## Use it
+## What you get
 
-Copy `SKILL.md` into your agent skills folder, or read it directly
-before building. The web integrator in the skill is a small,
-self-contained spring loop. The SwiftUI examples use only the public
-spring API.
+| Piece | What it does |
+|---|---|
+| Spring physics | Motion driven by stiffness, damping, and mass, not by a timer |
+| Interruptibility | Every new animation starts from the live on-screen value, with live velocity carried forward |
+| Velocity handoff | A drag release hands its velocity to the spring, so a flick travels further than a slow drag |
+| Rubber-band overscroll | Progressive resistance past an edge, with a ceiling, so content stretches but cannot be dragged away |
+| Tuning presets | Ready starting values for snappy, smooth, and bouncy motion |
+| Reduce Motion | A fallback for users who ask for less motion |
+| Verification checklist | Seven checks, including grab-and-reverse, flick, and overscroll, before calling it done |
 
-## Not affiliated with Apple
+## Quick start
 
-Spring Touch is an independent, original summary. It is not an Apple
+1. Read `SKILL.md`. It is the whole skill, in one file.
+2. Load it first when you build anything with animated touch:
+   dragging, flicking, sheets, lists, cards, toggles, or overscroll.
+3. Use the spring integrator from the skill, not a CSS transition,
+   for anything the user can grab mid-flight.
+
+## Code at a glance
+
+SwiftUI, using only the public spring API:
+
+```swift
+withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
+    isExpanded.toggle()
+}
+```
+
+Web, the original integrator from `SKILL.md`:
+
+```js
+// Run every frame, with dt in seconds, clamped.
+velocity += (-stiffness * (x - target) - damping * velocity) * dt;
+x += velocity * dt;
+```
+
+## Tuning
+
+Start here, then tune by feel on a real phone. Faster is usually
+better than slower.
+
+| Use | SwiftUI | Web, mass 1 |
+|---|---|---|
+| Snappy, toggles and micro-interactions | response 0.2, damping 0.7 | stiffness 300, damping 30 |
+| Smooth, default transitions | response 0.5, damping 0.9 | stiffness 170, damping 26 |
+| Bouncy, playful moments | response 0.3, damping 0.6 | stiffness 200, damping 15 |
+
+A damping fraction of 1.0 means no overshoot. Below 0.6 means
+visibly bouncy. Never set a fixed duration that fights the spring:
+a spring computes its own settle time.
+
+## Repository structure
+
+```
+spring-touch/
+  README.md   This page
+  SKILL.md    The full skill, load this first
+  LICENSE     MIT license
+```
+
+## Contributing
+
+Keep this repo small and original. A change should:
+
+- Use only original wording and original code
+- Keep the spring, interruptibility, and rubber-band rules intact
+- Add a check to the verification list if it adds a new behaviour
+- Not copy Apple code, decompiled code, branding, assets, or an
+  exact iOS user interface
+
+## Legal, in short
+
+Spring Touch is independent and original. It is not an Apple
 product, and it is not affiliated with or endorsed by Apple. It
 contains no Apple source code, no decompiled code, no Apple brand,
-logo, copy, assets, or system artwork. "iOS-style" in this repo is
+logo, copy, assets, or system artwork. "iOS-style" here is
 descriptive only, for a motion feel.
 
-## Copyright and patent note
-
-This repo contains only original wording and original code examples.
-Copyright protects expression, not a general function or idea, so
-writing new code for the same motion is not copying someone else's
-code. Do not paste Apple code, decompiled code, or another creator's
-script into this repo.
-
 This repo makes no claim that any Apple patent is expired, invalid,
-or cleared. Some overscroll techniques were covered by Apple patents
-in the past, and their history includes challenges and changing
-rulings. This skill stays at the level of general spring physics and
-original code, and it does not clone an exact iOS user interface.
-This note is not legal advice. For a commercial product, get real
-counsel before shipping a feature that copies a patented interaction
-step by step.
+or cleared. The full copyright, trademark, and patent boundary is in
+`SKILL.md`, under "Copyright, trademark, and patent boundary".
+That note is not legal advice. For a commercial product, get real
+counsel before shipping a feature that copies a patented
+interaction step by step.
 
-If a rights holder objects to any element here, that element will be
-removed first and discussed after.
+If a rights holder objects to any element here, that element will
+be removed first and discussed after.
 
 ## License
 
-No license file is included yet, so the contents are not yet offered
-under an open license. Add a license before reusing this skill in a
-project that needs one.
+MIT. See [LICENSE](LICENSE).
