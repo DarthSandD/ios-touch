@@ -14,6 +14,17 @@ Spring Touch turns that feel into code you can use on the web, in
 SwiftUI, and in any app with animated touch. No CSS transition or
 fixed easing curve is substituted for the spring.
 
+## See it in action
+
+![Spring Touch demo: spring curve overshooting to target, drag, flick, and rubber-band overscroll](docs/demo.png)
+
+<video src="docs/demo.mp4" controls width="100%"></video>
+
+12 seconds, no sound: a spring racing a fixed easing curve, a ball
+being dragged then flicked to a stop, and a card pulled past an edge
+with resistance that caps before it springs back. Both files are
+original, drawn from the spring code in `SKILL.md`.
+
 ## What you get
 
 | Piece | What it does |
@@ -74,6 +85,9 @@ spring-touch/
   README.md   This page
   SKILL.md    The full skill, load this first
   LICENSE     MIT license
+  docs/
+    demo.png  Still image from the demo
+    demo.mp4  12-second demo video
 ```
 
 ## Contributing
