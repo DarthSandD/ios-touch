@@ -5,6 +5,12 @@ description: Make websites and apps feel like iOS-style touch animation, using o
 
 # Spring Touch
 
+Contents: Status and ownership note, The core idea, When to use,
+Rule 1: Springs, Rule 2: Interruptibility, Rule 3: Velocity handoff,
+Rule 4: Rubber-band overscroll, Tuning presets, Performance and
+accessibility, Verification checklist, Copyright, trademark, and
+patent boundary, Default rule.
+
 ## Status and ownership note
 
 This skill is an original summary, written in our own words, with our own
