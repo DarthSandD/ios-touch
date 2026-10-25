@@ -18,13 +18,14 @@ fixed easing curve is substituted for the spring.
 
 ![Spring Touch demo: spring curve overshooting to target, drag, flick, and rubber-band overscroll](docs/demo.png)
 
-<video src="docs/demo.mp4" controls width="100%"></video>
+![Spring Touch animated demo: presets racing, grab-reverse, sheet detents, momentum rubber band](docs/demo.gif)
 
 20 seconds, no sound, four scenes: three spring presets racing to
 one target, a ball grabbed mid-flight and reversed with no jump and
 with velocity stretch, a sheet whose flick picks its detent, and a
 list with momentum that hits a rubber-band edge and springs back.
-Both files are original, drawn from the spring code in `SKILL.md`.
+All files are original, drawn from the spring code in `SKILL.md`.
+For full quality, watch the video file: [docs/demo.mp4](docs/demo.mp4).
 
 ## What you get
 
@@ -88,7 +89,8 @@ spring-touch/
   LICENSE     MIT license
   docs/
     demo.png  Still image from the demo
-    demo.mp4  20-second advanced demo video
+    demo.gif  Animated demo, this is what plays in the README
+    demo.mp4  20-second advanced demo video, full quality
 ```
 
 ## Contributing
