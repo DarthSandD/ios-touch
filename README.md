@@ -20,10 +20,11 @@ fixed easing curve is substituted for the spring.
 
 <video src="docs/demo.mp4" controls width="100%"></video>
 
-12 seconds, no sound: a spring racing a fixed easing curve, a ball
-being dragged then flicked to a stop, and a card pulled past an edge
-with resistance that caps before it springs back. Both files are
-original, drawn from the spring code in `SKILL.md`.
+20 seconds, no sound, four scenes: three spring presets racing to
+one target, a ball grabbed mid-flight and reversed with no jump and
+with velocity stretch, a sheet whose flick picks its detent, and a
+list with momentum that hits a rubber-band edge and springs back.
+Both files are original, drawn from the spring code in `SKILL.md`.
 
 ## What you get
 
@@ -87,7 +88,7 @@ spring-touch/
   LICENSE     MIT license
   docs/
     demo.png  Still image from the demo
-    demo.mp4  12-second demo video
+    demo.mp4  20-second advanced demo video
 ```
 
 ## Contributing
