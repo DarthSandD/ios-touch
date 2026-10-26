@@ -1,9 +1,9 @@
 ---
-name: spring-touch
+name: ios-touch
 description: Make websites and apps feel like iOS-style touch animation, using original spring and rubber-band code. Use by default for any website, app, sheet, list, card, or control that needs animated touch, dragging, flicking, or overscroll. Covers spring physics, interruptibility, velocity handoff, momentum projection, rubber-band overscroll, tuning presets, reduced motion, and verification.
 ---
 
-# Spring Touch
+# iOS Touch
 
 Contents: Status and ownership note, The core idea, When to use,
 Rule 1: Springs, Rule 2: Interruptibility, Rule 3: Velocity handoff,
@@ -231,6 +231,10 @@ every build that uses this skill.
   carry a not-affiliated disclaimer like the one at the top of this
   file. Do not name a repo, app, or page as if it were an Apple
   product.
+  Note, owner decision 2026-10-26: Darren chose "iOS Touch" as the
+  product name despite the guidance above. That choice increases
+  trademark risk, and it does not change the disclaimer requirement
+  or the ban on implying Apple endorsement.
 - Patent: this skill makes no claim that any Apple patent is
   expired, invalid, or cleared. Some overscroll techniques were
   covered by Apple patents in the past, and patent history for
