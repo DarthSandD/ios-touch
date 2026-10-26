@@ -1,6 +1,6 @@
-# Spring Touch
+# iOS Touch
 
-[![Skill](https://img.shields.io/badge/skill-spring--touch-0e62d7)](SKILL.md)
+[![Skill](https://img.shields.io/badge/skill-ios--touch-0e62d7)](SKILL.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **iOS-style touch animation, as an original, reusable skill.**
@@ -10,15 +10,15 @@ iOS-style motion has mass: it accelerates, overshoots a little, and
 settles. A user can grab it mid-flight, reverse it, and flick it, and
 it never jumps.
 
-Spring Touch turns that feel into code you can use on the web, in
+iOS Touch turns that feel into code you can use on the web, in
 SwiftUI, and in any app with animated touch. No CSS transition or
 fixed easing curve is substituted for the spring.
 
 ## See it in action
 
-![Spring Touch demo: spring curve overshooting to target, drag, flick, and rubber-band overscroll](docs/demo.png)
+![iOS Touch demo: spring curve overshooting to target, drag, flick, and rubber-band overscroll](docs/demo.png)
 
-![Spring Touch animated demo: presets racing, grab-reverse, sheet detents, momentum rubber band](docs/demo.gif)
+![iOS Touch animated demo: presets racing, grab-reverse, sheet detents, momentum rubber band](docs/demo.gif)
 
 20 seconds, no sound, four scenes: three spring presets racing to
 one target, a ball grabbed mid-flight and reversed with no jump and
@@ -83,7 +83,7 @@ a spring computes its own settle time.
 ## Repository structure
 
 ```
-spring-touch/
+ios-touch/
   README.md   This page
   SKILL.md    The full skill, load this first
   LICENSE     MIT license
@@ -105,8 +105,10 @@ Keep this repo small and original. A change should:
 
 ## Legal, in short
 
-Spring Touch is independent and original. It is not an Apple
-product, and it is not affiliated with or endorsed by Apple. It
+iOS Touch is independent and original. It is not an Apple
+product, and it is not affiliated with or endorsed by Apple.
+Name note: Darren chose this name on 2026-10-26, knowing the
+trademark risk of using an Apple term in a product name. It
 contains no Apple source code, no decompiled code, no Apple brand,
 logo, copy, assets, or system artwork. "iOS-style" here is
 descriptive only, for a motion feel.
